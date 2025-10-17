@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "roni.putra.kotlin"
         minSdk = 26
-        targetSdk = 35
+        this.targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

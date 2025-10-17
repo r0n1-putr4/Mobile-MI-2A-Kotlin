@@ -14,8 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileMi2AKotlin"
         tools:targetApi="31">
+
         <activity
-            android:name=".widgets.FormMahasiswaActivity"
+            android:name=".intent.HasilMinumanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.HasilActivity"
             android:exported="false" />
         <activity
             android:name=".ui.TableLayoutActivity"
@@ -30,10 +34,10 @@
             android:name=".ui.RelativeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".intent.LatActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ScrollViewActivity"
+            android:name=".menu.MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
