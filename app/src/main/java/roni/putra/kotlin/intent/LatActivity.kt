@@ -2,7 +2,6 @@ package roni.putra.kotlin.intent
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
-import android.content.pm.Checksum
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
@@ -76,7 +75,7 @@ class LatActivity : AppCompatActivity() {
     fun prosesBayar(){
         btnSimpan.setOnClickListener {
             var harga_jumlah = 0.0
-            var total_bayar = 0.0
+            var total_bayar: Double
 
             if (chkPokat.isChecked){
                 harga_jumlah += etJlhPokat.text.toString().toDouble() * 10_000
@@ -92,12 +91,12 @@ class LatActivity : AppCompatActivity() {
             }
 
 
-            var disc = if(spPelanggan.selectedItem.equals("Baru")){
+            val disc = if(spPelanggan.selectedItem.equals("Baru")){
                 0.1
             }else
                 0.2
 
-            var potongan = if(harga_jumlah>100_000){
+            val potongan = if(harga_jumlah>100_000){
                 10_000
             }else
                 0
@@ -112,14 +111,13 @@ class LatActivity : AppCompatActivity() {
 
     fun setJenisPelanggan(){
         val listPelanggan = arrayOf("Baru", "Member")
-        val adapterPelanggan: ArrayAdapter<*>
-        adapterPelanggan = ArrayAdapter(this, R.layout.spin_style, listPelanggan)
+        val adapterPelanggan = ArrayAdapter(this, R.layout.spin_style, listPelanggan)
         spPelanggan.adapter = adapterPelanggan
     }
 
     fun setTanggalOrder(){
         val myCalendar = Calendar.getInstance()
-        var datePicker: DatePickerDialog.OnDateSetListener =
+        val datePicker: DatePickerDialog.OnDateSetListener =
             DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
             myCalendar[Calendar.YEAR] = year
             myCalendar[Calendar.MONTH] = month

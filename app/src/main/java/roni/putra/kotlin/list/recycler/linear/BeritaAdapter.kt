@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import roni.putra.kotlin.R
 
 class BeritaAdapter(
-    private val listBerita : List<BeritaModel>
+    private val listBerita : List<BeritaModel>,
+    val onClickListener: OnAdapterListener
 ) : RecyclerView.Adapter<BeritaAdapter.ViewBerita>() {
 
     override fun onCreateViewHolder(
@@ -28,6 +29,11 @@ class BeritaAdapter(
         holder.tvJudul.text = berita.judul
         holder.tvTanggal.text = berita.tanggal
 
+        //Ketika item kita pilih/klik
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(berita)
+        }
+
     }
 
     override fun getItemCount() = listBerita.size
@@ -37,4 +43,9 @@ class BeritaAdapter(
         val tvJudul = view.findViewById<TextView>(R.id.tvJudul)
         val tvTanggal = view.findViewById<TextView>(R.id.tvTanggal)
     }
+
+    interface OnAdapterListener{
+        fun onClick(result: BeritaModel)
+    }
+
 }

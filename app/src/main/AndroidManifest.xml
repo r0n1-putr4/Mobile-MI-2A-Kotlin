@@ -16,6 +16,9 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".list.recycler.linear.DetailBeritaActivity"
+            android:exported="false" />
+        <activity
             android:name=".intent.HasilMinumanActivity"
             android:exported="false" />
         <activity
@@ -37,7 +40,7 @@
             android:name=".intent.LatActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.MenuActivity"
+            android:name=".list.recycler.linear.GridRecyeclerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
