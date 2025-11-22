@@ -318,7 +318,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../../../Program%20Files/Android%20Studio/Sdk/icons/material/materialicons/assistant_navigation/baseline_assistant_navigation_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../../../../Program%20Files/Android%20Studio/Sdk/icons/material/materialsymbolsoutlined/assured_workload/outline_assured_workload_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -328,7 +328,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_star" />
+                            <entry key="outputName" value="ic_tes" />
                             <entry key="sourceFile" value="D:\Bahan Ajar\PNP\Mobile\Kotlin\Mobile-MI-2A-Kotlin" />
                           </map>
                         </option>

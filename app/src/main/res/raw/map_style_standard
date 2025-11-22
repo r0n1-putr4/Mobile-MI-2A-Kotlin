@@ -1,0 +1,14 @@
+[
+  {
+    "featureType": "administrative.country",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#713dff"
+      },
+      {
+        "weight": 5
+      }
+    ]
+  }
+]
